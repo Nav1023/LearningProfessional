@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Download, Search, Filter, FileText, ListChecks, ClipboardList } from 'lucide-react';
+import { Download, Search, FileText, ListChecks, ClipboardList } from 'lucide-react';
 
 interface Resource {
   id: string;

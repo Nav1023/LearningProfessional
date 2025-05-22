@@ -108,5 +108,5 @@ button:focus-visible {
 
 /* Input field with icon specific padding */
 .input-with-icon-padding {
-  @apply pl-11 !important; /* Corresponds to w-10 (2.5rem) for icon container + a little extra space */
+  @apply !pl-11; /* Corresponds to w-10 (2.5rem) for icon container + a little extra space */
 }

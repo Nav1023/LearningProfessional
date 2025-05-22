@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Download, Award, ExternalLink } from 'lucide-react';
+import { Download, Award } from 'lucide-react';
 
 // Mock data for earned certificates
 const earnedCertificates = [

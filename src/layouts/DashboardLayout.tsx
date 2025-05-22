@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Home, BookOpen, Award, UserCircle, LogOut, Menu, X } from 'lucide-react';
+import {BookOpen, Award, UserCircle, LogOut, Menu, X } from 'lucide-react';
 
 const sidebarNavItems = [
   { name: 'My Courses', href: '/dashboard/my-courses', icon: BookOpen },

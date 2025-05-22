@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+// import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock } from 'lucide-react';
 
 interface LoginFormProps {
@@ -13,7 +13,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess, onSwitchToRegiste
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Still might be needed for forgot password navigation if it remains a page
+  // const navigate = useNavigate(); // Still might be needed for forgot password navigation if it remains a page
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

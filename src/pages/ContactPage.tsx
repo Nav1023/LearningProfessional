@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AccordionItem from '../components/AccordionItem'; // Reusing AccordionItem
-import { User, Mail, MessageSquare, Send, MapPin, Phone, Info } from 'lucide-react';
+import { User, Mail, Send, MapPin, Phone, Info } from 'lucide-react';
 
 // Mock FAQ data for Contact Page
 const contactFaqs = [

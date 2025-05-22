@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PlayCircle, RefreshCw } from 'lucide-react'; // Using RefreshCw for Resume
+import {RefreshCw } from 'lucide-react'; // Using RefreshCw for Resume
 
 // Mock data for enrolled courses
 const enrolledCourses = [
