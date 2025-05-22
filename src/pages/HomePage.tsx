@@ -20,15 +20,39 @@ const HomePage: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       {/* Hero Banner Section */}
       <section 
-        className="bg-cover bg-center h-[60vh] text-white py-24 px-10 object-fill"
+        className="bg-cover bg-center h-[70vh] md:h-[65vh] text-white py-20 px-6 object-fill relative flex items-center justify-center"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
       >
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">Train Online. Certify Globally.</h1>
-          <p className="text-2xl mb-12">Start your ISO training journey today</p>
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
-            Explore Courses
-          </button>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="container mx-auto text-center z-10">
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          >
+            Train Online. Certify Globally.
+          </motion.h1>
+          <motion.p 
+            className="text-xl sm:text-2xl mb-10 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+          >
+            Start your ISO training journey today
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+          >
+            <Link 
+                to="/courses"
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+                Explore Courses
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -143,21 +167,22 @@ const HomePage: React.FC = () => {
       {/* Newsletter Signup Section */}
       <section id="newsletter" className="py-12 md:py-20 bg-gray-100">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Updated!</h2>
-          <p className="text-lg mb-8 mx-auto max-w-2xl">Subscribe to our newsletter to get the latest news about new courses, special offers, and industry insights directly in your inbox.</p>
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">Stay Updated!</h2>
+          <p className="text-lg mb-8 mx-auto max-w-2xl text-gray-600">Subscribe to our newsletter to get the latest news about new courses, special offers, and industry insights directly in your inbox.</p>
           <form className="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 items-center">
             <label htmlFor="email-newsletter" className="sr-only">Email address</label>
             <input 
               type="email" 
               id="email-newsletter"
               placeholder="Enter your email address"
-              className="w-full sm:flex-grow px-4 py-3 rounded-md text-gray-700 focus:ring-2 focus:ring-green-400 focus:outline-none" 
+              className="w-full sm:flex-grow px-4 py-3 rounded-md text-gray-700 border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none shadow-sm transition-colors duration-300"
               required 
             />
             <button 
               type="submit" 
-              className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300"
+              className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
+              <Send size={18} className="inline mr-2"/>
               Subscribe
             </button>
           </form>
