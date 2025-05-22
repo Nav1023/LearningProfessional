@@ -1,11 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CourseCard from '../components/CourseCard';
-import { Laptop, Globe, Award } from 'lucide-react';
 import TestimonialCard from '../components/TestimonialCard';
+import { Laptop, Globe, Award, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const HomePage: React.FC = () => {
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       {/* Hero Banner Section */}
       <section 
         className="bg-cover bg-center h-[60vh] text-white py-24 px-10 object-fill"
@@ -21,7 +33,14 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Featured Courses Section */}
-      <section className="py-16 bg-gray-50">
+      <motion.section 
+        id="featured-courses" 
+        className="py-12 md:py-20 bg-gray-50"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Featured Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -45,10 +64,17 @@ const HomePage: React.FC = () => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16">
+      <motion.section 
+        id="why-choose-us" 
+        className="py-12 md:py-20 bg-white"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Why Choose Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
@@ -75,10 +101,17 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
+      <motion.section 
+        id="testimonials" 
+        className="py-12 md:py-20 bg-blue-50"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">What Our Learners Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -105,10 +138,10 @@ const HomePage: React.FC = () => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Newsletter Signup Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section id="newsletter" className="py-12 md:py-20 bg-gray-100">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Stay Updated!</h2>
           <p className="text-lg mb-8 mx-auto max-w-2xl">Subscribe to our newsletter to get the latest news about new courses, special offers, and industry insights directly in your inbox.</p>
@@ -130,7 +163,7 @@ const HomePage: React.FC = () => {
           </form>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
