@@ -31,17 +31,17 @@ const coursesData: {[key: string]: any} = {
       bio: 'Dr. Carter has over 15 years of experience in quality management and ISO standardization. She has helped numerous organizations achieve ISO 9001 certification and is passionate about sharing her knowledge.',
       linkedinUrl: '#', // Placeholder
       email: 'emily.carter@example.com',
-      experience: '15+ Years in Quality Management',
-      testimonials: [
-        { id: 'ct1', quote: 'Dr. Carter made complex topics easy to grasp. The ISO 9001 Foundation course was a game-changer for my career!', name: 'Alex P.', title: 'Junior Quality Analyst', avatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg', rating: 5 },
-        { id: 'ct2', quote: 'Highly practical and engaging. I feel confident in applying these principles in my organization.', name: 'Jessica M.', title: 'Operations Supervisor', avatarUrl: 'https://randomuser.me/api/portraits/women/25.jpg', rating: 4 },
-      ],
-      faqs: [
-        { id: 'faq1', question: 'Is this course suitable for beginners?', answer: 'Absolutely! This foundation course is designed for individuals with little to no prior knowledge of ISO 9001. We start with the basics and build up your understanding gradually.' },
-        { id: 'faq2', question: 'How long will I have access to the course materials?', answer: 'You will have lifetime access to all course materials, including videos, documents, and any future updates.' },
-        { id: 'faq3', question: 'Is there an exam at the end of the course?', answer: 'Yes, there is an online examination at the end. Upon successful completion, you will receive your digital certificate instantly.' },
-      ]
-    }
+      experience: '15+ Years in Quality Management'
+    },
+    testimonials: [
+      { id: 'ct1', quote: 'Dr. Carter made complex topics easy to grasp. The ISO 9001 Foundation course was a game-changer for my career!', name: 'Alex P.', title: 'Junior Quality Analyst', avatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg', rating: 5 },
+      { id: 'ct2', quote: 'Highly practical and engaging. I feel confident in applying these principles in my organization.', name: 'Jessica M.', title: 'Operations Supervisor', avatarUrl: 'https://randomuser.me/api/portraits/women/25.jpg', rating: 4 },
+    ],
+    faqs: [
+      { id: 'faq1', question: 'Is this course suitable for beginners?', answer: 'Absolutely! This foundation course is designed for individuals with little to no prior knowledge of ISO 9001. We start with the basics and build up your understanding gradually.' },
+      { id: 'faq2', question: 'How long will I have access to the course materials?', answer: 'You will have lifetime access to all course materials, including videos, documents, and any future updates.' },
+      { id: 'faq3', question: 'Is there an exam at the end of the course?', answer: 'Yes, there is an online examination at the end. Upon successful completion, you will receive your digital certificate instantly.' },
+    ]
   },
   // Add other courses here as needed for direct navigation via URL
    'iso-27001-implementer': {
