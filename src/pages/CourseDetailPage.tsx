@@ -5,9 +5,10 @@ import TestimonialCard from '../components/TestimonialCard';
 import AccordionItem from '../components/AccordionItem';
 
 // Mock course data - in a real app, fetch this based on courseId or use a global state/context
+// Updated to use simple string IDs ('1', '2', etc.) matching CoursesPage.tsx
 const coursesData: {[key: string]: any} = {
-  'iso-9001-foundation': {
-    id: 'iso-9001-foundation',
+  '1': { // Changed from 'iso-9001-foundation'
+    id: '1', // Match the key
     name: 'ISO 9001:2015 QMS Foundation',
     bannerImage: 'https://images.unsplash.com/photo-1520607162502-acabdf0825c9?q=80&w=2070&auto=format&fit=crop',
     description: 'An in-depth introduction to Quality Management Systems based on the ISO 9001:2015 standard. Perfect for beginners and those looking to understand the core principles.',
@@ -43,9 +44,8 @@ const coursesData: {[key: string]: any} = {
       { id: 'faq3', question: 'Is there an exam at the end of the course?', answer: 'Yes, there is an online examination at the end. Upon successful completion, you will receive your digital certificate instantly.' },
     ]
   },
-  // Add other courses here as needed for direct navigation via URL
-   'iso-27001-implementer': {
-    id: 'iso-27001-implementer',
+  '2': { // Changed from 'iso-27001-implementer'
+    id: '2', // Match the key
     name: 'ISO 27001 Lead Implementer',
     bannerImage: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop',
     description: 'Comprehensive training to implement and manage an Information Security Management System (ISMS) based on ISO 27001.',
@@ -69,14 +69,14 @@ const coursesData: {[key: string]: any} = {
       linkedinUrl: '#',
       email: 'michael.chen@example.com',
       experience: '12+ Years in Cybersecurity',
-      testimonials: [
-        { id: 'ct3', quote: 'This Lead Implementer course provided the exact knowledge I needed. Michael is a fantastic instructor!', name: 'David K.', title: 'Security Engineer', avatarUrl: 'https://randomuser.me/api/portraits/men/40.jpg', rating: 5 },
-      ],
-      faqs: [
-        { id: 'faq27k1', question: 'What are the prerequisites for this Lead Implementer course?', answer: 'A basic understanding of information security concepts is recommended. Prior knowledge of ISO 27001 is helpful but not mandatory.' },
-        { id: 'faq27k2', question: 'Does this course prepare for a certification exam?', answer: 'Yes, this course is designed to prepare you for the ISO 27001 Lead Implementer certification exam offered by recognized bodies.' },
-      ]
-    }
+    },
+    testimonials: [
+      { id: 'ct3', quote: 'This Lead Implementer course provided the exact knowledge I needed. Michael is a fantastic instructor!', name: 'David K.', title: 'Security Engineer', avatarUrl: 'https://randomuser.me/api/portraits/men/40.jpg', rating: 5 },
+    ],
+    faqs: [
+      { id: 'faq27k1', question: 'What are the prerequisites for this Lead Implementer course?', answer: 'A basic understanding of information security concepts is recommended. Prior knowledge of ISO 27001 is helpful but not mandatory.' },
+      { id: 'faq27k2', question: 'Does this course prepare for a certification exam?', answer: 'Yes, this course is designed to prepare you for the ISO 27001 Lead Implementer certification exam offered by recognized bodies.' },
+    ]
   }
 };
 

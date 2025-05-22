@@ -25,7 +25,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, description, imageUrl, c
         <p className="text-gray-600 text-sm mb-4 flex-grow">{description}</p>
         <Link 
           to={courseLink} 
-          className="mt-auto inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm transition-colors duration-300 text-center"
+          className="mt-auto inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded text-sm transition-colors duration-300 text-center"
         >
           Learn More
         </Link>

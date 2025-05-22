@@ -69,22 +69,25 @@ const HomePage: React.FC = () => {
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Featured Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <CourseCard 
-              title="ISO 9001: Lead Auditor"
-              description="Master the principles of quality management systems and lead successful audits."
-              imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              courseLink="/courses/iso-9001-lead-auditor" // Example link
+              title="ISO 9001:2015 QMS Foundation"
+              description="Understand the fundamentals of Quality Management Systems based on ISO 9001."
+              imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+              courseLink="/courses/1"
+              cpdHours="8"
             />
             <CourseCard 
-              title="ISO 27001: Information Security"
-              description="Learn to implement and manage an Information Security Management System."
-              imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              courseLink="/courses/iso-27001-infosec"
+              title="ISO 27001 Lead Implementer"
+              description="Learn to implement an Information Security Management System (ISMS) effectively."
+              imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+              courseLink="/courses/2"
+              cpdHours="24"
             />
             <CourseCard 
-              title="ISO 14001: Environmental Management"
+              title="ISO 14001: Environmental Awareness"
               description="Understand environmental management systems and drive sustainability."
-              imageUrl="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              courseLink="/courses/iso-14001-environmental"
+              imageUrl="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop"
+              courseLink="#"
+              cpdHours="4"
             />
           </div>
         </div>

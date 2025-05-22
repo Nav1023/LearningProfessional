@@ -92,7 +92,7 @@ const ProfilePage: React.FC = () => {
               />
               <label 
                 htmlFor="profilePictureInput" 
-                className="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full cursor-pointer shadow-md transition-colors"
+                className="absolute bottom-0 right-0 bg-green-500 hover:bg-green-600 text-white p-2 rounded-full cursor-pointer shadow-md transition-colors"
               >
                 <User size={16}/>
                 <input type="file" id="profilePictureInput" className="hidden" accept="image/*" onChange={handleProfilePictureChange} />
@@ -101,11 +101,11 @@ const ProfilePage: React.FC = () => {
             <div className="flex-1 w-full">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Full Name</label>
-                <div className="mt-1 relative rounded-md shadow-sm">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                    <div className="px-3 pointer-events-none">
                         <User className="h-5 w-5 text-gray-400" />
                     </div>
-                    <input type="text" id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} className="form-input pl-10" placeholder="Your Full Name" />
+                    <input type="text" id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="Your Full Name" />
                 </div>
               </div>
             </div>
@@ -113,21 +113,21 @@ const ProfilePage: React.FC = () => {
 
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address (Read-only)</label>
-             <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+             <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                <div className="px-3 pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="email" id="email" value={mockUser.email} readOnly className="form-input pl-10 bg-gray-100 cursor-not-allowed" />
+                <input type="email" id="email" value={mockUser.email} readOnly className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-gray-100" />
             </div>
           </div>
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
-            <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                <div className="px-3 pointer-events-none">
                     <Phone className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className="form-input pl-10" placeholder="e.g., 123-456-7890"/>
+                <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="e.g., 123-456-7890"/>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ const ProfilePage: React.FC = () => {
           </div>
 
           <div className="text-right">
-            <button type="submit" className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <button type="submit" className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
               <Save size={18} className="mr-2" />
               Save Profile Changes
             </button>
@@ -153,29 +153,29 @@ const ProfilePage: React.FC = () => {
         <form onSubmit={handleChangePasswordSubmit} className="space-y-6">
           <div>
             <label htmlFor="currentPassword" className="block text-sm font-medium text-gray-700">Current Password</label>
-            <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                <div className="px-3 pointer-events-none">
                     <KeyRound className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="password" id="currentPassword" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} className="form-input pl-10" placeholder="Enter your current password" />
+                <input type="password" id="currentPassword" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="Enter your current password" />
             </div>
           </div>
           <div>
             <label htmlFor="newPassword" className="block text-sm font-medium text-gray-700">New Password</label>
-             <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+             <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                <div className="px-3 pointer-events-none">
                     <KeyRound className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="password" id="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="form-input pl-10" placeholder="Enter new password (min. 6 characters)" />
+                <input type="password" id="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="Enter new password (min. 6 characters)" />
             </div>
           </div>
           <div>
             <label htmlFor="confirmNewPassword" className="block text-sm font-medium text-gray-700">Confirm New Password</label>
-            <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                <div className="px-3 pointer-events-none">
                     <KeyRound className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="password" id="confirmNewPassword" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} className="form-input pl-10" placeholder="Confirm new password" />
+                <input type="password" id="confirmNewPassword" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="Confirm new password" />
             </div>
           </div>
           <div className="text-right">

@@ -97,29 +97,29 @@ const ContactPage: React.FC = () => {
           <form onSubmit={handleFormSubmit} className="space-y-5">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-              <div className="relative rounded-md shadow-sm">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                  <div className="px-3 pointer-events-none">
                       <User className="h-5 w-5 text-gray-400" />
                   </div>
-                  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="form-input pl-10" placeholder="Your Name" />
+                  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="Your Name" />
               </div>
             </div>
             <div>
               <label htmlFor="email-contact" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-              <div className="relative rounded-md shadow-sm">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                  <div className="px-3 pointer-events-none">
                       <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-                  <input type="email" id="email-contact" value={email} onChange={(e) => setEmail(e.target.value)} className="form-input pl-10" placeholder="you@example.com" />
+                  <input type="email" id="email-contact" value={email} onChange={(e) => setEmail(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="you@example.com" />
               </div>
             </div>
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-              <div className="relative rounded-md shadow-sm">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+                  <div className="px-3 pointer-events-none">
                       <Info className="h-5 w-5 text-gray-400" />
                   </div>
-                  <input type="text" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} className="form-input pl-10" placeholder="e.g., Question about ISO 9001 Course" />
+                  <input type="text" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent" placeholder="e.g., Question about ISO 9001 Course" />
               </div>
             </div>
             <div>

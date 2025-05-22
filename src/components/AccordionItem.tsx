@@ -16,8 +16,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpenI
         onClick={() => setIsOpen(!isOpen)} 
         className="flex justify-between items-center w-full text-left"
       >
-        <h4 className="text-lg font-medium text-gray-800 hover:text-blue-600">{question}</h4>
-        {isOpen ? <ChevronUp className="w-5 h-5 text-blue-600" /> : <ChevronDown className="w-5 h-5 text-gray-500" />}
+        <h4 className="text-lg font-medium text-gray-100 hover:text-blue-400">{question}</h4>
+        {isOpen ? <ChevronUp className="w-5 h-5 text-blue-400" /> : <ChevronDown className="w-5 h-5 text-gray-300" />}
       </button>
       {isOpen && (
         <div className="mt-3 pl-2 pr-2 text-gray-600 text-sm leading-relaxed">

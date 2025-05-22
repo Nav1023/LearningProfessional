@@ -101,14 +101,14 @@ const ResourcesPage: React.FC = () => {
           {/* Search Input */}
           <div className="md:col-span-1">
             <label htmlFor="search-resources" className="block text-sm font-medium text-gray-700 mb-1">Search Resources</label>
-            <div className="relative rounded-md shadow-sm">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="mt-1 relative flex items-center rounded-md shadow-sm border border-gray-300">
+              <div className="px-3 pointer-events-none">
                 <Search className="h-5 w-5 text-gray-400" />
               </div>
               <input 
                 type="text" 
                 id="search-resources"
-                className="form-input pl-10 block w-full"
+                className="block w-full py-2 border-0 focus:ring-0 sm:text-sm placeholder-gray-400 bg-transparent"
                 placeholder="e.g., Audit Report, QMS Template"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}

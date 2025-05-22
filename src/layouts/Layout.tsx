@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
+  isAuthenticated: boolean;
+  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, isAuthenticated, setIsAuthenticated }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
       <main className="flex-grow container mx-auto px-6 py-8">
         {children}
       </main>

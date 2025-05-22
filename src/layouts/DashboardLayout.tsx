@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Home, BookOpen, Award, UserCircle, LogOut, Menu, X } from 'lucide-react';
 
 const sidebarNavItems = [
@@ -8,8 +8,14 @@ const sidebarNavItems = [
   { name: 'Account Settings', href: '/dashboard/profile', icon: UserCircle },
 ];
 
-const DashboardLayout: React.FC = () => {
+interface DashboardLayoutProps {
+  isAuthenticated: boolean;
+  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({ setIsAuthenticated }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Close sidebar when route changes on mobile
@@ -20,7 +26,9 @@ const DashboardLayout: React.FC = () => {
   }, [location.pathname]);
 
   const handleLogout = () => {
-    alert('Logged out (mock)!');
+    setIsAuthenticated(false);
+    alert('Logged out successfully!');
+    navigate('/');
   };
 
   const SidebarContent = () => (
